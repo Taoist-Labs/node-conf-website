@@ -8,6 +8,7 @@ import ClaimButton from '../../../components/ClaimButton'
 import { getStatus } from '../../../utils/public.ts'
 import useQuerySNS from '../../../hooks/useQuerySNS.tsx'
 import { truncateAddress } from '../../../utils/address.ts'
+import { normalizeProposalUrl } from '../../../utils/url.ts'
 import styled from 'styled-components'
 import { CLAIM_END_AT, CLAIM_START_AT } from '../../../config/config.ts'
 import { X } from 'lucide-react'
@@ -409,7 +410,7 @@ export default function MeetingStage({ data }: Props) {
                     </div>
                   </div>
                   <a
-                    href={proposal.link}
+                    href={normalizeProposalUrl(proposal.link)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-primary px-2 sm:px-4"

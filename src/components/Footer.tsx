@@ -42,9 +42,9 @@ const socialLinks = [
 ]
 
 const quickLinks = [
-  { name: 'SeeDAO官网', href: 'https://seedao.xyz' },
-  { name: 'SeeDAO App/OS', href: 'https://app.seedao.xyz' },
-  { name: 'SeeDAO Seed', href: 'https://seed.seedao.xyz' },
+  { name: 'SeeDAO官网', href: 'https://home.seedao.top' },
+  { name: 'SeeDAO App/OS', href: 'https://seedao.top' },
+  { name: 'SeeDAO Seed', href: 'https://seed.seedao.top' },
 ]
 
 export default function Footer() {

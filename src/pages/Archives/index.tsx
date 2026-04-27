@@ -10,6 +10,7 @@ import { getSeasonCandidate } from '../../api/getSeasonCandidate.ts'
 import { getSeasonProposals } from '../../api/getSeasonProposals.ts'
 import { getSeasonNodes } from '../../api/getSeasonNodes.ts'
 import DefaultImg from '../../assets/images/defaultAvatar.png'
+import { normalizeProposalUrl } from '../../utils/url.ts'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import styled from 'styled-components'
 
@@ -261,7 +262,9 @@ export default function ArchivesPage() {
                         </span>
                         {selectedSeasonData.currentCriteria.validSCRProposalLink && (
                           <a
-                            href={selectedSeasonData.currentCriteria.validSCRProposalLink}
+                            href={normalizeProposalUrl(
+                              selectedSeasonData.currentCriteria.validSCRProposalLink
+                            )}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-xs text-primary-600 hover:text-primary-700"
@@ -279,7 +282,9 @@ export default function ArchivesPage() {
                         </span>
                         {selectedSeasonData.currentCriteria.activeSCRProposalLink && (
                           <a
-                            href={selectedSeasonData.currentCriteria.activeSCRProposalLink}
+                            href={normalizeProposalUrl(
+                              selectedSeasonData.currentCriteria.activeSCRProposalLink
+                            )}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-xs text-primary-600 hover:text-primary-700"
@@ -319,7 +324,9 @@ export default function ArchivesPage() {
                       </span>
                       {selectedSeasonData.nextSeasonCriteria.validSCRProposalLink && (
                         <a
-                          href={selectedSeasonData.nextSeasonCriteria.validSCRProposalLink}
+                          href={normalizeProposalUrl(
+                            selectedSeasonData.nextSeasonCriteria.validSCRProposalLink
+                          )}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-xs text-primary-600 hover:text-primary-700"
@@ -337,7 +344,9 @@ export default function ArchivesPage() {
                       </span>
                       {selectedSeasonData.nextSeasonCriteria.activeSCRProposalLink && (
                         <a
-                          href={selectedSeasonData.nextSeasonCriteria.activeSCRProposalLink}
+                          href={normalizeProposalUrl(
+                            selectedSeasonData.nextSeasonCriteria.activeSCRProposalLink
+                          )}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-xs text-primary-600 hover:text-primary-700"
@@ -545,7 +554,7 @@ export default function ArchivesPage() {
                       </div>
                     </div>
                     <a
-                      href={proposal.link}
+                      href={normalizeProposalUrl(proposal.link)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-primary px-2 sm:px-4 "
