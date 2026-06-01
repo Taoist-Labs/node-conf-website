@@ -4,7 +4,7 @@ interface ResSeasonNodesData {
     data: string[]; // Array of Ethereum addresses
 }
 
-const BASE_URL = 'https://api.seedao.tech/v1';
+const BASE_URL = 'https://api.seedao.top/v1';
 
 export async function getSeasonNodes(seasonIdx: number): Promise<ResSeasonNodesData> {
     try {

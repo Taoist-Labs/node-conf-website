@@ -14,7 +14,7 @@ interface ResSeasonProposalsData {
   data: SeasonProposal[]
 }
 
-const BASE_URL = 'https://api.seedao.tech/v1'
+const BASE_URL = 'https://api.seedao.top/v1'
 
 export async function getSeasonProposals(seasonIdx: number): Promise<ResSeasonProposalsData> {
   try {
